@@ -1,35 +1,22 @@
 // axios
-const posts = [
-  {
-    id: 1,
-    title: '제목1',
-    content: '내용1',
-    createdAt: '2020-01-01',
-  },
-  {
-    id: 2,
-    title: '제목2',
-    content: '내용2',
-    createdAt: '2020-01-01',
-  },
-  {
-    id: 3,
-    title: '제목3',
-    content: '내용3',
-    createdAt: '2020-01-01',
-  },
-  {
-    id: 4,
-    title: '제목4',
-    content: '내용4',
-    createdAt: '2020-01-01',
-  },
-]
+import axios from 'axios'
+
+const BASE_URL = 'http://localhost:5000/posts'
 
 export function getPosts() {
-  return posts
+  return axios.get(`${BASE_URL}`)
 }
 
 export function getPostById(id) {
-  return posts.find(item => item.id === id)
+  return axios.get(`${BASE_URL}/${id}`)
+}
+
+export function createPost(data) {
+  return axios.post(`${BASE_URL}`, data)
+}
+export function updatePost(id, data) {
+  return axios.put(`${BASE_URL}/${id}`, data)
+}
+export function deletePost(id) {
+  return axios.delete(`${BASE_URL}/${id}`)
 }

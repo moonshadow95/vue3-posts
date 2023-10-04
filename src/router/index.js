@@ -69,14 +69,14 @@ const routes = [
 
 const router = createRouter({
   // ()안에 root 경로를 지정함
-  // history: createWebHistory('/'),
+  history: createWebHistory('/'),
+  // history: createWebHashHistory(),
   // 해시모드 => # 뒤는 요청하지 않는다.
   // 히스토리모드로 서버에 배포할 때는 추가적인 설정이 필요하다.
   /** 해시모드를 사용하면 요청을 root 로만 보내기 때문에 필요없지만,
    * 그렇기 때문에 SEO 에 불리하다. 그렇기 때문에 보통 히스토리모드를 사용한다.
    */
 
-  history: createWebHashHistory(),
   routes,
 })
 

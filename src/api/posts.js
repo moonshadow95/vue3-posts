@@ -3,8 +3,8 @@ import axios from 'axios'
 
 const BASE_URL = 'http://localhost:5000/posts'
 
-export function getPosts() {
-  return axios.get(`${BASE_URL}`)
+export function getPosts(params) {
+  return axios.get(`${BASE_URL}`, { params })
 }
 
 export function getPostById(id) {

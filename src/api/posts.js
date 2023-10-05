@@ -1,22 +1,20 @@
 // axios
-import axios from 'axios'
-
-const BASE_URL = 'http://localhost:5000/posts'
+import { posts } from '@/api/index'
 
 export function getPosts(params) {
-  return axios.get(`${BASE_URL}`, { params })
+  return posts.get(`/`, { params })
 }
 
 export function getPostById(id) {
-  return axios.get(`${BASE_URL}/${id}`)
+  return posts.get(`/${id}`)
 }
 
 export function createPost(data) {
-  return axios.post(`${BASE_URL}`, data)
+  return posts.post(`/`, data)
 }
 export function updatePost(id, data) {
-  return axios.put(`${BASE_URL}/${id}`, data)
+  return posts.put(`/${id}`, data)
 }
 export function deletePost(id) {
-  return axios.delete(`${BASE_URL}/${id}`)
+  return posts.delete(`/${id}`)
 }

@@ -31,10 +31,10 @@
       "createdAt": "2020-01-06"
     },
     {
-      "id": 6,
       "title": "제목6",
-      "content": "내용6",
-      "createdAt": "2020-01-07"
+      "content": "내용61",
+      "createdAt": "2020-01-07",
+      "id": 6
     },
     {
       "id": 7,

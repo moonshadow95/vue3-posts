@@ -44,7 +44,7 @@ const edit = async () => {
     await updatePost(id, {
       ...form.value,
     })
-    router.push({ name: 'PostDetail', params: id })
+    // router.push({ name: 'PostDetail', params: id })
     vAlert('수정이 완료되었습니다!', 'success')
   } catch (error) {
     console.log(error)
